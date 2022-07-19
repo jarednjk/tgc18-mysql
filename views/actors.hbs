@@ -1,10 +1,25 @@
 {{#extends 'base'}}
 {{#block 'content'}}
-    <form method="GET">
-        <div>
-            <label></label>
-        </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Actor ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    {{#each actors}}
+        <tr>
+            <td>{{this.actor_id}}</td>
+            <td>{{this.first_name}}</td>
+            <td>{{this.last_name}}</td>
+        </tr>
+    {{/each}}
+</table>
+    
+{{/block}}
 
-    </form>
+{{#block 'js'}}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {{/block}}
 {{/extends}}
